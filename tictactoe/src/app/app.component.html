@@ -1,2 +1,10 @@
-<app-square></app-square>
-<router-outlet></router-outlet>
+<h2>Current Player: {{ currentPlayer }}</h2>
+<div>
+  <ng-template ngFor let-x [ngForOf]="[0,1,2]">
+    <br/>
+    <ng-template ngFor let-y [ngForOf]="[0,1,2]">
+      <app-square [index]="{x,y}" [currentPlayer]="currentPlayer" [gameover]="successfullMessage" (switchPlayer)="switchPlayer($event)"></app-square>
+    </ng-template>
+  </ng-template>
+</div>
+<h1 *ngIf="successfullMessage"> Player {{currentPlayer}} won !!!</h1>
