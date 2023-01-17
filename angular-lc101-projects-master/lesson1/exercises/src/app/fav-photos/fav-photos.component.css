@@ -3,9 +3,12 @@ h3 {
 }
 
 img {
+  border-radius: 50px;
+  border: 2pc;
+  height: 50px;
+  width: 50px;
 
 }
-
 .photos {
    text-align: center;
 }
