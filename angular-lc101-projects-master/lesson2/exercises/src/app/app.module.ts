@@ -8,7 +8,7 @@ import { CandidatesComponent } from './candidates/candidates.component';
   declarations: [
     AppComponent,
     CandidatesComponent
-  ],
+     ],
   imports: [
     BrowserModule
   ],
