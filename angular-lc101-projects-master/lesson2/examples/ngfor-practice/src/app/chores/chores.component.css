@@ -1,3 +1,13 @@
 .chores {
     color: #ff4f33;
  }
+
+ h3{
+  color: black;
+  font-size: 15px;
+ }
+
+ li{
+  color: red;
+  font-size: 13px;
+ }
