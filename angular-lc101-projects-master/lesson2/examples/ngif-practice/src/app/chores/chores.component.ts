@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
    styleUrls: ['./chores.component.css']
 })
 export class ChoresComponent implements OnInit {
-   chores = ['Empty dishwasher', 'Complete LaunchCode prep work', 'Buy groceries'];
-   finishedChores = [];
+   chores = ['Buy groceries',];
+   finishedChores = [ 'Empty dishwasher','Complete LaunchCode prep work','Buy groceries','Shopping','test'];
 
-   targetImage = 'https://www.launchcode.org/assets/icons/target-00c7a0bc7776901e3c5cdc4c36c465f19e41a249bc7267a595f0bfa14ab944b7.png';
+   targetImage = 'https://as1.ftcdn.net/v2/jpg/02/22/69/80/1000_F_222698039_NXsqKQNxbi2ZaSOkmtdi4unbNeBMGafT.jpg';
 
    constructor() { }
 
