@@ -1,4 +1,35 @@
-<h2>Mission Planning Dashboard</h2>
-<h2>Mission Name: {{missionName}}</h2>
-<h2>Carrier Rocket: {{carrierROcket}}</h2>
+<div class="htmlcontainer">
+  <h2>Mission Planning Dashboard</h2>
+  <div>
+    <h2 class="centered" *ngIf = "!editMissionName; else editMission" (click)="editMissionName = true">
+      Mission Name :{{missionName}}
+    </h2>
+  </div>
+  <div>
+    <h2 *ngIf = "!editCarrierName; else editCarrier" (click)="editCarrierName = true">
+      Carrier Rocket Name: {{carrierRocket}}
+    </h2>
+  </div>
 
+</div>
+
+
+
+
+<ng-template #editMission>
+
+  <h2 class="centered">
+      Mission Name:
+      <!-- Add a keyup.enter event that calls the changeMissionName function. -->
+      <input #newName (keyup.enter)="changeMissionName(newName.value)"  type="text"/>
+  </h2>
+</ng-template>
+
+<ng-template #editCarrier>
+
+  <h2 class="centered">
+      Carrier Rocket Name:
+      <!-- Add a keyup.enter event that calls the changeMissionName function. -->
+      <input #carrierName (keyup.enter)="changecarrierRocketName(carrierName.value)"  type="text"/>
+  </h2>
+</ng-template>

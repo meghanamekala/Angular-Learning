@@ -7,6 +7,17 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  missionName : string ='Mars 2030';
-  carrierROcket : string = 'Plasma Max';
+  missionName : string = "Mission launch";
+  editMissionName: boolean;
+  carrierRocket : string = 'Plasma Max';
+  editCarrierName : boolean;
+
+  changeMissionName(name:any){
+    this.missionName = name;
+    this.editMissionName = false;
+  }
+  changecarrierRocketName(carrierNames:any){
+    this.carrierRocket = carrierNames;
+    this.editCarrierName = false;
+  }
 }

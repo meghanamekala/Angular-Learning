@@ -2,7 +2,21 @@
   <h1>Crew</h1>
   <ul>
     <li *ngFor="let crewarr of crewArray">
-      {{crewarr}}
+      <span *ngIf="memberBeingEdited != crewarr;else NameClicked" (click)="memberBeingEdited = crewarr" >
+        {{crewarr.name}}
+      </span>
+      <ng-template #NameClicked>
+        <input #nameclick type="text" [value]="crewarr.name"/>
+        <button (click)="updatedName(nameclick.value, crewarr)">Save</button>
+      </ng-template>
+      <span *ngIf="crewarr.firstMission">- 1st</span>
+      <button class="removeClass" (click)="remove(crewarr)" *ngIf="memberBeingEdited != crewarr">remove</button>
     </li>
   </ul>
+  <input #crew type="text" placeholder="Enter New crew Name" />
+  <label>First Mission <input #isFirst type="checkbox"/>
+  </label>
+  <button (click)="add(crew.value ,isFirst.checked)"> Add</button>
 </div>
+
+
